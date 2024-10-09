@@ -1,31 +1,36 @@
-name: Deploy Svelte App to GitHub Pages
+# This workflow will build and deploy a Svelte app to GitHub Pages using Node.js version 20
+
+name: Deploy Svelte App
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4  # Check out the repository
+      - uses: actions/setup-node@v4  # Set up Node.js environment
         with:
-          node-version: '20'
+          node-version: 20  # Use Node.js version 20
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci  # Install dependencies with npm ci
+      - run: npm run build  # Build the Svelte app
 
-      - name: Build the Svelte app
-        run: npm run build
+  deploy:
+    needs: build  # Ensure the build job completes successfully
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # Check out the repository again for deployment
+      - uses: actions/setup-node@v4  # Set up Node.js for deployment
+        with:
+          node-version: 20  # Use Node.js version 20
 
+      - run: npm ci  # Install dependencies again for the deployment
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4  # Deploy the build to GitHub Pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./public  # Adjust if your output directory is different
