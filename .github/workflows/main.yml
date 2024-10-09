@@ -1,49 +1,36 @@
-name: CI/CD Workflow for Svelte and Node.js
+name: Build and Deploy Svelte App
 
 on:
   push:
     branches:
-      - main
+      - main  # Build and deploy only when pushing to 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Checkout the code from the repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # Step 2: Setup Node.js with a specific version
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          node-version: 20  # Latest version
+          node-version: '20'  # Use Node.js version 20
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies from package.json
       - name: Install dependencies
-        run: npm ci  # Clean install for Node.js dependencies
+        run: npm ci  # Clean install Node.js packages
 
       # Step 4: Build the Svelte app
       - name: Build Svelte app
-        run: npm run build  # Ensure your package.json has a build script for Svelte
+        run: npm run build  # Run the build command for your Svelte app
 
-      # Step 5: Test Playwright Svelte with Vercel
-      - name: Test Playwright Svelte
-        uses: machycek/wait-for-vercel-preview@v1.3.3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token
-          url_part: '<your-vercel-url-part>'  # Add the relevant Vercel URL part
-          max_timeout: 300  # Optional, wait time in seconds
-          environment: 'production'  # Optional, environment name
-          allow_inactive: true  # Optional, allow inactive deployments
-          check_interval: 5  # Optional, set check interval in seconds
-          vercel_password: ${{ secrets.VERCEL_PASSWORD }}  # Optional, if Vercel is password protected
-          path: '/'  # Optional, path to check
-
-      # Step 6: Deploy to GitHub Pages (if needed)
+      # Step 5: Deploy the app to GitHub Pages from the root folder
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3  # GitHub Pages Action
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # Adjust to your Svelte build output folder (usually 'public')
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Token for authentication
+          publish_dir: ./public  # Path where the build output is located
