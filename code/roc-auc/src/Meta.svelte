@@ -8,8 +8,6 @@
     name="description"
     content="A Visual Explanation of Receiver Operating Characteristic Curves and Area Under the Curve in machine learning."
   />
-  <meta name="author" content="Jared Wilber" />
-  <meta
     name="news_keywords"
     content="roc r.o.c. auc a.u.c. classifiation threshold receiver operating characteristic curve area under the curve  auroc a.u.r.o.c. visual precision recall machine learning f1 score classification"
   />
