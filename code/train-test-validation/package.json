@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "Creative Commons Attribution-ShareAlike 4.0 International License",
   "description": "MLU-Explain article about train/test/validation splits.",
-  "author": "Jared Wilber",
+  "author": " ",
   "main": "dist/index.html",
   "files": [
     "dist/**"
