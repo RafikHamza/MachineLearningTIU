@@ -41,7 +41,7 @@
     Under the Curve
   </h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/jdwlbr">Jared Wilber</a>, June 2022
+    <a  R H</a>, 
   </h3>
 </section>
 
