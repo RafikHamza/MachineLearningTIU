@@ -4,7 +4,7 @@
   <h1 id="intro-hed">Precision<br /> &<br /> Recall</h1>
   <h1 class="intro-sub">Accuracy Is Not Enough</h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/jdwlbr">Jared Wilber</a>, March 2022
+    <a R H</a>, 
   </h3>
 </section>
 
