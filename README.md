@@ -16,7 +16,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/linear-regression/](/code/linear-regression)
 
-**Authors**: Jared Wilber
 
 ## Logistic Regression
 
@@ -28,7 +27,7 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/logistic-regression/](/code/logistic-regression)
 
-**Authors**: Erin Bugbee, Jared Wilber
+
 
 ## ROC & AUC
 
@@ -40,7 +39,7 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/roc-auc/](/code/roc-auc)
 
-**Authors**: Jared Wilber
+
 
 ## Train, Test, And Validation Sets
 
@@ -52,7 +51,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/train-test-validation/](/code/train-test-validation)
 
-**Authors**: Jared Wilber, Brent Werness
 
 ## Precision & Recall
 
@@ -64,7 +62,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/precision-recall/](/code/precision-recall)
 
-**Authors**: Jared Wilber
 
 ## Random Forest
 
@@ -76,7 +73,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/random-forest/](/code/random-forest)
 
-**Authors**: Jenny Yeon, Jared Wilber
 
 ## Decision Trees
 
@@ -88,7 +84,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/decision-tree/](/code/decision-tree)
 
-**Authors**: Jared Wilber, Lucía Santamaría
 
 ## Bias Variance Tradeoff
 
@@ -100,7 +95,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/bias-variance/](/code/bias-variance)
 
-**Authors**: Jared Wilber, Brent Werness
 
 ## Double Descent: A Visual Introduction
 
@@ -112,7 +106,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/double-descent/](/code/double-descent)
 
-**Authors**: Jared Wilber, Brent Werness
 
 ## Double Descent 2: A Mathematical Explanation
 
@@ -124,7 +117,6 @@ This material exists as supplementary educational material for [Machine Learning
 
 **Code**: [/code/double-descent2/](/code/double-descent2)
 
-**Authors**: Brent Werness, Jared Wilber
 
 ## Running Locally
 
